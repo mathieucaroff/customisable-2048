@@ -36,7 +36,7 @@ interface HTMLActuator {
     updateBestScore: (bestScore) => any;
     message: (won) => any;
     clearMessage: () => any;
-    formatValue: (value: number) => number;
+    formatValue: (value: number) => string;
 }
 
 export function HTMLActuator(getFormatValue) {
@@ -111,6 +111,21 @@ HTMLActuator.prototype.addTile = function (this: HTMLActuator, tile) {
 
     inner.classList.add('tile-inner');
     inner.textContent = self.formatValue(+tile.value);
+
+    let targetWidthPx = 107;
+    if (document.querySelector('.game-container').clientWidth < 300) {
+        targetWidthPx = 58;
+    }
+
+    if (inner.textContent.length <= 1) {
+        inner.style.fontSize = `${
+            (targetWidthPx * 0.8) / inner.textContent.length
+        }px`;
+    } else {
+        inner.style.fontSize = `${
+            (targetWidthPx * 1.4) / inner.textContent.length
+        }px`;
+    }
 
     if (tile.previousPosition) {
         window.requestAnimationFrame(function () {
