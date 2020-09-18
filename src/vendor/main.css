@@ -1,0 +1,175 @@
+/*******************************
+*** loxaxs' website css 2016 ***
+*******************************/
+
+/* *** Colors *** */
+/* Body - background */
+body {
+	background-color: white;
+}
+@media (max-width: 799px) {	body {
+background-image: url("i/bg800.jpg");}}
+@media (min-width: 800px) { body {
+background-image: url("i/bg1366.jpg");}}
+@media (min-width: 1366px) { body {
+background-image: url("i/bg1920.jpg");}}
+@media (min-width: 1920px) { body {
+background-image: url("i/bg3840.jpg");}}
+
+/* Title - colors */
+#entete h1, #entete h2 {
+  background-color: #669933;
+  color: #FFF;
+}
+
+/* Navigation - colors */
+#navigation {
+	background-color: #9F917F;
+}
+
+#navigation a {
+	color: #281C09;
+	background-color: #867864;
+}
+
+#navigation a:hover, #navigation a:focus {
+	background-color: #6F614D;
+}
+
+/* Links - colors *
+a {
+    color: #FF6533;
+}
+a:hover, a:focus {
+    color: #FF4C00;
+}
+strong {
+    color: #A1B55D;
+}/**/
+
+/* Main content - colors */
+#contenu {
+	background-color: #f5f5f5;
+    color: #363B29;
+    background: #cbd888;
+}
+#contenu a {
+    color: #332510;
+}
+#contenu a:hover, #contenu a:focus {
+    color: #6E5122;
+}
+#contenu strong {
+    color: #181A12;
+}
+#contenu h2 {
+    color:#535535;
+    background-color: #9EBF6D;
+}
+#contenu h3 {
+    padding: 2px 0 3px 8px;
+    background-color: #9EBF6D;
+}
+
+/* *** Fonts *** */
+/* Title - fonts */
+#entete h1, #entete h2 {
+  font-style: normal;
+  font-size: 36px;
+  text-align: center;
+  font-family: Georgia, "Bitstream Vera Serif", Norasi, serif
+}
+
+/* Main content - fonts */
+#contenu {
+	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif;
+	line-height: 1.5;
+}
+#contenu ul {
+    list-style: square;
+}
+#contenu h2 {
+    font-size: 2em;
+}
+#contenu h1, #contenu h2 {
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+    font-weight: normal;
+}
+
+/* Navigation - fonts */
+#navigation {
+	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif;
+    text-decoration: none;
+    font-weight:bold;
+	text-align: center;
+}
+#navigation li {
+	list-style: none;
+}
+
+
+
+
+/* *** Positionning *** */
+#global {
+	padding-top: 28px;
+}
+#tron {
+    padding-top: 20px;
+}
+/* Title - positionning */
+#entete {
+	padding: 20px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#entete h1 {
+    margin: 0;
+	padding: 5px 5px 10px 5px;
+}
+#entete h1 img {
+    float: left;
+    margin: 8px 20px 8px 8px;
+}
+
+/* Navigation - positionning */
+#navigation {
+	padding: 4px;
+}
+#navigation li {
+	margin: 0;
+	padding: 0;
+}
+#navigation .row {
+    margin: 0;
+}
+#navigation .row > div {
+	padding: 4px;
+}
+#navigation a {
+	display: inline-block;
+	width: 100%;
+	padding: 6px;
+}
+#navigation ul {
+	padding-left: 0;
+	margin-bottom: 0;
+}
+#navigation .spacer, #navigation .row .spacer {
+	padding: 4px;
+	margin: 0;
+}
+
+/* Main content - positionning */
+#contenu {
+	padding: 10px 20px;
+    text-align: left;
+}
+#contenu p {
+    margin: .75em 0;
+}
+#contenu h2 {
+    margin-top: 10px;
+	padding: 3px 1.5%;
+    text-align: center;
+}
