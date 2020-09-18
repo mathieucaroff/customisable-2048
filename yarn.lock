@@ -4283,6 +4283,11 @@ repeat-string@^1.6.1:
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
   integrity sha1-jcrkcOHIirwtYA//Sndihtp15jc=
 
+replace-all-text-nodes@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/replace-all-text-nodes/-/replace-all-text-nodes-1.0.1.tgz#f48e6b1fec55c41630ca885fabc8f5a513dc7800"
+  integrity sha1-9I5rH+xVxBYwyohfq8j1pRPceAA=
+
 request-promise-core@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.4.tgz#3eedd4223208d419867b78ce815167d10593a22f"

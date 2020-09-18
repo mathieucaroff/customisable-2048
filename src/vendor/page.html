@@ -4,23 +4,23 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>2048 de loxaxs</title>
+  <title>2048</title>
 
   <!-- meta -->
   <meta charset="utf-8">
-  <meta name="keywords" content="2048 2048 2048">
+  <meta name="keywords" content="2048 game adaptable customisable skin">
   <meta name="description" content="2048 game page - 2048 version">
   <meta name="author" content="Loxan Oxyde">
 
   <!-- link -->
   <link rel="shortcut icon" href="http://loxaxs.free.fr/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="./main.css" type="text/css">
   <link rel="stylesheet" href="./game.css" type="text/css">
   <link rel="stylesheet" href="./2048.css" type="text/css">
 
   <!-- scripts -->
-  <script src="./2048.ts"></script>
+  <script src="../2048.ts"></script>
   <script src="./game_manager.ts"></script>
   <script src="./grid.ts"></script>
   <script src="./html_actuator.ts"></script>
@@ -42,171 +42,104 @@
 
 <body>
   <div id="global">
-    <div class="container">
-      <div id="entete">
-        <h1>
-          <img src="./loxIcon.png" alt="icon" heigh="32" width="32">
-          2048 de loxaxs
-        </h1>
-      </div><!-- end of div#entete -->
-    </div>
-
     <div id="tron" class="container">
       <div class="row">
-        <div class="col-xs-4 col-md-3">
-          <div id="navigation">
-            <ul>
-              <div class="row">
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr">
-                    <li>Accueil</li>
-                  </a></div>
-                <div class="col-sm-12 spacer"></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/2048">
-                    <li>Jouer au 2048</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/2047">
-                    <li>Jouer au 2047</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/4095">
-                    <li>Jouer au 4095</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/2p11">
-                    <li>Jouer au 2¹¹</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/11">
-                    <li>Jouer au 11</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/22">
-                    <li>Jouer au 22</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/121">
-                    <li>Jouer au 121</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/2097">
-                    <li>Jouer au 2097152</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/144">
-                    <li>Jouer au 144</li>
-                  </a></div>
-                <div class="col-sm-12"><a href="http://loxaxs.free.fr/fr/13860">
-                    <li>Jouer au 13860</li>
-                  </a></div>
-                <div class="col-sm-12 spacer"></div>
-                <div class="col-sm-6"><a href="http://loxaxs.free.fr/en">
-                    <li>Version anglaise du site</li>
-                  </a></div>
-                <div class="col-sm-6"><a href="http://loxaxs.free.fr/fr">
-                    <li>Version française du site</li>
-                  </a></div>
-                <div class="col-sm-12 spacer"></div>
-                <div class="col-sm-6"><a href="http://loxaxs.free.fr/en/2048">
-                    <li>Version anglaise de la page</li>
-                  </a></div>
-                <div class="col-sm-6"><a href="http://loxaxs.free.fr/fr/2048">
-                    <li>Version française de la page</li>
-                  </a></div>
+        <div id="contenu">
+          <div class="whole-container">
+            <div class="heading">
+              <h1 class="title">2048</h1>
+              <div class="scores-container">
+                <div class="score-container">0<div class="score-addition"></div>
+                </div>
+                <div class="best-container">0</div>
               </div>
-            </ul>
-          </div><!-- end of div#navigation -->
-        </div>
-        <div class="col-xs-8 col-md-9">
-          <div id="contenu">
-            <div class="whole-container">
-              <div class="heading">
-                <h1 class="title">2048</h1>
-                <div class="scores-container">
-                  <div class="score-container">0<div class="score-addition"></div>
-                  </div>
-                  <div class="best-container">0</div>
+            </div>
+
+            <div class="above-game">
+              <p class="game-intro">Assemblez les nombres et <br>obtenez <strong>la case 2048
+                  !</strong></p>
+              <a class="restart-button">Nouvelle Partie</a>
+            </div>
+
+            <div class="game-container">
+              <div class="game-message">
+                <p></p>
+                <div class="lower">
+                  <a class="keep-playing-button">Poursuivre la partie</a>
+                  <a class="retry-button">Nouvelle partie</a>
                 </div>
               </div>
 
-              <div class="above-game">
-                <p class="game-intro">Assemblez les nombres et <br>obtenez <strong>la case 2048
-                    !</strong></p>
-                <a class="restart-button">Nouvelle Partie</a>
-              </div>
-
-              <div class="game-container">
-                <div class="game-message">
-                  <p></p>
-                  <div class="lower">
-                    <a class="keep-playing-button">Poursuivre la partie</a>
-                    <a class="retry-button">Nouvelle partie</a>
-                  </div>
+              <div class="grid-container">
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
                 </div>
-
-                <div class="grid-container">
-                  <div class="grid-row">
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                  </div>
-                  <div class="grid-row">
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                  </div>
-                  <div class="grid-row">
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                  </div>
-                  <div class="grid-row">
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                    <div class="grid-cell"></div>
-                  </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
                 </div>
-
-                <div class="tile-container">
-                  <div class="tile tile-2 tile-position-1-1 tile-new">
-                    <div class="tile-inner">2</div>
-                  </div>
-                  <div class="tile tile-8 tile-position-1-2 tile-new">
-                    <div class="tile-inner">8</div>
-                  </div>
-                  <div class="tile tile-2 tile-position-1-3 tile-new">
-                    <div class="tile-inner">2</div>
-                  </div>
-                  <div class="tile tile-256 tile-position-1-4 tile-new">
-                    <div class="tile-inner">256</div>
-                  </div>
-                  <div class="tile tile-2 tile-position-2-2 tile-new">
-                    <div class="tile-inner">2</div>
-                  </div>
-                  <div class="tile tile-4 tile-position-2-3 tile-new">
-                    <div class="tile-inner">4</div>
-                  </div>
-                  <div class="tile tile-64 tile-position-2-4 tile-new">
-                    <div class="tile-inner">64</div>
-                  </div>
-                  <div class="tile tile-2 tile-position-3-1 tile-new">
-                    <div class="tile-inner">2</div>
-                  </div>
-                  <div class="tile tile-32 tile-position-3-4 tile-new">
-                    <div class="tile-inner">32</div>
-                  </div>
-                  <div class="tile tile-2 tile-position-4-3 tile-new">
-                    <div class="tile-inner">2</div>
-                  </div>
-                  <div class="tile tile-4 tile-position-4-4 tile-new">
-                    <div class="tile-inner">4</div>
-                  </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
+                  <div class="grid-cell"></div>
                 </div>
               </div>
 
-              <p class="game-explanation"><strong class="important">Comment jouer :</strong> Utilisez les
-                <strong>flèches directionnelles</strong> pour déplacer les cases. Lorsque 2 cases avec
-                le même nombre sont côte à côte, alors <strong>elles s'assemblent en une seule
-                  !</strong><br>La touche R permet de relancer une nouvelle partie.</p>
-            </div> <!-- end of div.whole-container -->
-          </div><!-- end of div#contenu -->
-        </div>
+              <div class="tile-container">
+                <div class="tile tile-2 tile-position-1-1 tile-new">
+                  <div class="tile-inner">2</div>
+                </div>
+                <div class="tile tile-8 tile-position-1-2 tile-new">
+                  <div class="tile-inner">8</div>
+                </div>
+                <div class="tile tile-2 tile-position-1-3 tile-new">
+                  <div class="tile-inner">2</div>
+                </div>
+                <div class="tile tile-256 tile-position-1-4 tile-new">
+                  <div class="tile-inner">256</div>
+                </div>
+                <div class="tile tile-2 tile-position-2-2 tile-new">
+                  <div class="tile-inner">2</div>
+                </div>
+                <div class="tile tile-4 tile-position-2-3 tile-new">
+                  <div class="tile-inner">4</div>
+                </div>
+                <div class="tile tile-64 tile-position-2-4 tile-new">
+                  <div class="tile-inner">64</div>
+                </div>
+                <div class="tile tile-2 tile-position-3-1 tile-new">
+                  <div class="tile-inner">2</div>
+                </div>
+                <div class="tile tile-32 tile-position-3-4 tile-new">
+                  <div class="tile-inner">32</div>
+                </div>
+                <div class="tile tile-2 tile-position-4-3 tile-new">
+                  <div class="tile-inner">2</div>
+                </div>
+                <div class="tile tile-4 tile-position-4-4 tile-new">
+                  <div class="tile-inner">4</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="game-explanation"><strong class="important">Comment jouer :</strong> Utilisez les
+              <strong>flèches directionnelles</strong> pour déplacer les cases. Lorsque 2 cases avec
+              le même nombre sont côte à côte, alors <strong>elles s'assemblent en une seule
+                !</strong><br>La touche R permet de relancer une nouvelle partie.</p>
+          </div> <!-- end of div.whole-container -->
+        </div><!-- end of div#contenu -->
       </div><!-- end of div.row -->
     </div><!-- end of div#tron -->
   </div> <!-- end of div#global -->

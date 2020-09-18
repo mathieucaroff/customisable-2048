@@ -25,12 +25,19 @@ import { Tile } from './tile';
  * @param {[type]} InputManager   [description]
  * @param {[type]} Actuator       [description]
  * @param {[type]} StorageManager [description]
+ * @param {[type]} getFormatValue [description]
  */
-export function GameManager(size, InputManager, Actuator, StorageManager) {
+export function GameManager(
+    size,
+    InputManager,
+    Actuator,
+    StorageManager,
+    getFormatValue,
+) {
     this.size = size; // Size of the grid
     this.inputManager = new InputManager();
     this.storageManager = new StorageManager();
-    this.actuator = new Actuator();
+    this.actuator = new Actuator(getFormatValue);
 
     this.startTiles = 2;
 

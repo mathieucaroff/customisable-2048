@@ -1,3 +1,4 @@
+import { getFormatValue } from '../2048';
 /**
 
   The Initial Developer of the Original Code is
@@ -25,5 +26,11 @@ function Main() {
     console.log('Main 2048 Game');
 
     // lancement du jeu
-    new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+    new GameManager(
+        4,
+        KeyboardInputManager,
+        HTMLActuator,
+        LocalStorageManager,
+        getFormatValue,
+    );
 }

@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": "https://github.com/mathieucaroff/customisable-2048",
+  "scripts": {
+    "dev": "parcel src/vendor/page.html",
+    "build": "parcel build src/vendor/page.html -d public -o index.html",
+    "check": "tsc src/vendor/main.ts"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "replace-all-text-nodes": "^1.0.1"
+  },
   "devDependencies": {
     "parcel": "^1.12.4",
     "prettier": "^2.1.2",
     "typescript": "^4.0.2"
-  },
-  "dependencies": {
-    "bootstrap": "^4.5.2"
   }
 }

@@ -1,4 +1,3 @@
-import { formatValue } from './2048';
 /**
 
   The Initial Developer of the Original Code is
@@ -20,13 +19,35 @@ import { formatValue } from './2048';
  * Permet de metter à jour l'interface du jeu
  *
  */
-export function HTMLActuator() {
+
+interface HTMLActuator {
+    tileContainer: HTMLElement;
+    scoreContainer: HTMLElement;
+    bestContainer: HTMLElement;
+    messageContainer: HTMLElement;
+    actuate: (grid, metadata) => any;
+    continueGame: () => any;
+    clearContainer: (container) => any;
+    addTile: (tile) => any;
+    applyClasses: (element, classes) => any;
+    normalizePosition: (position) => any;
+    positionClass: (position) => any;
+    updateScore: (score) => any;
+    updateBestScore: (bestScore) => any;
+    message: (won) => any;
+    clearMessage: () => any;
+    formatValue: (value: number) => number;
+}
+
+export function HTMLActuator(getFormatValue) {
     this.tileContainer = document.querySelector('.tile-container');
     this.scoreContainer = document.querySelector('.score-container');
     this.bestContainer = document.querySelector('.best-container');
     this.messageContainer = document.querySelector('.game-message');
 
     this.score = 0;
+
+    this.formatValue = getFormatValue();
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
@@ -74,7 +95,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
  *
  * @param {[type]} tile [description]
  */
-HTMLActuator.prototype.addTile = function (tile) {
+HTMLActuator.prototype.addTile = function (this: HTMLActuator, tile) {
     var self = this;
 
     var wrapper = document.createElement('div');
@@ -89,7 +110,7 @@ HTMLActuator.prototype.addTile = function (tile) {
     this.applyClasses(wrapper, classes);
 
     inner.classList.add('tile-inner');
-    inner.textContent = formatValue(tile.value);
+    inner.textContent = self.formatValue(+tile.value);
 
     if (tile.previousPosition) {
         window.requestAnimationFrame(function () {
