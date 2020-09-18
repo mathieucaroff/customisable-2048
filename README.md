@@ -16,3 +16,7 @@
 It is possible to specify all 18 numbers manually. For example:
 
 - [2048](https://customisable-2048.now.sh/?1=2?2=4?3=8?4=16?5=32?6=64?7=128?8=256?9=512?10=1024?11=2048?12=4096?13=8192?14=16384?15=32768?16=65536?17=131072?18=262144)
+
+Time to be creative:
+
+- [2048](<https://customisable-2048.now.sh/?game=2**(12-n)>)
