@@ -2,6 +2,7 @@
 /*/
 tmp/
 
+!/doc/
 !/src/
 
 # Files

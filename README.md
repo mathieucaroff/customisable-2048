@@ -1,5 +1,7 @@
 # [Customisable 2048](https://customisable-2048.now.sh)
 
+[![preview](./doc/screenshot.png)](https://customisable-2048.now.sh)
+
 ## Examples:
 
 - [11](https://customisable-2048.now.sh/?game=n)
